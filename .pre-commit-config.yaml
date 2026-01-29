@@ -1,7 +1,7 @@
 repos:
   # Basic hygiene (whitespace, eof, yaml validity, etc.)
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -11,19 +11,19 @@ repos:
 
   # Black: code formatter
   - repo: https://github.com/psf/black
-    rev: 24.10.0
+    rev: 26.1.0
     hooks:
       - id: black
 
   # isort: import sorter (plays nicely with black)
   - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+    rev: 7.0.0
     hooks:
       - id: isort
 
   # Ruff: extremely fast linter (replaces flake8, pyflakes, etc.)
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+    rev: v0.14.14
     hooks:
       - id: ruff
         args: ["--fix"]
