@@ -1,0 +1,17 @@
+name: robot-vision-rl
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pytest
+  - pybullet
+  - opencv
+  - pip:
+      - gymnasium
+      - stable-baselines3
+      - torch
+      - pyyaml
+      - tqdm
+      - pre-commit
