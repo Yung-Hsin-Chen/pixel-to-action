@@ -27,16 +27,22 @@ This makes `robot_vision_rl` importable everywhere.
 ```bash
 pip install -e .
 ```
- ### 4. Enable pre-commit
- ```bash
- pre-commit install
- ```
+### 4. Enable pre-commit
+```bash
+pre-commit install
+```
 
- ### 5. Sanity check
- Run this to confirm everything is wired correctly:
- ```bash
- python -c "import pybullet as p; import robot_vision_rl; print('All good')"
- ```
+### 5. Sanity check
+Run this to confirm everything is wired correctly:
+```bash
+python -c "import pybullet as p; import robot_vision_rl; print('All good')"
+```
+
+### 6. Identity setting in this repo
+```bash
+git config user.name "YOUR_NAME"
+git config user.email "YOUR_EMAIL"
+```
 
 ## Notebooks setup (Jupyter + VS Code)
 This repo supports notebooks for debugging and visualisation.
