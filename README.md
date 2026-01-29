@@ -25,7 +25,7 @@ conda activate robot-vision-rl
 ### 3. Install the package (editable mode)
 This makes `robot_vision_rl` importable everywhere.
 ```bash
-pip install -e .
+pip install -e . --no-deps
 ```
 ### 4. Enable pre-commit
 ```bash

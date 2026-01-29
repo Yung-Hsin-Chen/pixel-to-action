@@ -3,13 +3,10 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "robot-vision-rl"
+name = "pixel-to-action"
 version = "0.1.0"
-description = "Vision-based RL robotics in simulation"
-readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-  "numpy",
   "gymnasium",
   "stable-baselines3",
   "pyyaml",

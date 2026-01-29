@@ -5,13 +5,14 @@ dependencies:
   - python=3.11
   - pip
   - numpy
-  - pytest
+  - libomp
   - pybullet
+  - pytorch
   - opencv
+  - pytest
   - pip:
       - gymnasium
       - stable-baselines3
-      - torch
       - pyyaml
       - tqdm
       - pre-commit
