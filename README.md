@@ -52,34 +52,11 @@ Install Jupyter + kernel tooling (either conda-forge or pip is fine; conda-forge
 pip install jupyterlab notebook ipykernel
 ```
 
-<!-- ### 2. Register the kernel for VS Code
-This makes the environment show up as a selectable kernel in VS Code:
-```bash
-python -m ipykernel install --user --name robot-vision-rl --display-name "pixel-to-action"
-``` -->
 
-### 2. Set Jupyter server root directory (Jupyter config)
-You can force Jupyter to treat the repo as the file root by setting `c.ServerApp.root_dir = "<path-to-your-repo>"`
-
-Generate config if you don’t already have it:
-```bash
-jupyter server --generate-config
-```
-
-Then edit the config:
-```bash
-vim ~/.jupyter/jupyter_server_config.py
-```
-
-Add (or modify) this line:
-```bash
-c.ServerApp.root_dir = "/ABSOLUTE/PATH/TO/pixel-to-action"
-```
-
-### 3. Setups in VS Code
+### 2. Setups in VS Code
 - In VS Code, install the Jupyter extension from the Extensions marketplace.
 
-- Open Settings (`Cmd` + `,`).
+- Open Settings (`Cmd` + `,` on macOS; `Ctrl` + `,` on Windows/Linux)
 
 - Search for Notebook File Root.
 
