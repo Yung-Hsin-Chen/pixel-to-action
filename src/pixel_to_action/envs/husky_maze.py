@@ -36,6 +36,27 @@ class HuskyMazeEnv(gym.Env):
         p.loadURDF("plane.urdf")
         self._husky = p.loadURDF("husky/husky.urdf", [0, 0, 0.1])
 
+        # ----- WALLS (visible + collidable) -----
+        wall_half = [0.1, 2.0, 0.3]  # (x, y, z) half extents
+        col = p.createCollisionShape(p.GEOM_BOX, halfExtents=wall_half)
+        vis = p.createVisualShape(p.GEOM_BOX, halfExtents=wall_half, rgbaColor=[0.7, 0.7, 0.7, 1])
+
+        # Place wall so it sits on the ground: z = half height
+        p.createMultiBody(
+            baseMass=0,
+            baseCollisionShapeIndex=col,
+            baseVisualShapeIndex=vis,
+            basePosition=[1.0, 0.0, wall_half[2]],
+        )
+
+        # A second wall to make it obvious
+        p.createMultiBody(
+            baseMass=0,
+            baseCollisionShapeIndex=col,
+            baseVisualShapeIndex=vis,
+            basePosition=[0.0, 1.5, wall_half[2]],
+        )
+
     def _set_action(self, action: int):
         if action == 0:
             left, right = 4.0, 8.0
